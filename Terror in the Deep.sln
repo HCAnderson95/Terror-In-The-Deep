@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{02360223-AD4F-D312-8D7E-8611439E3B83}") = "Terror in the Deep", "Assembly-CSharp-firstpass.csproj", "{5266EB2D-14CF-A89D-B00D-E74CB717EF08}"
+EndProject
+Project("{02360223-AD4F-D312-8D7E-8611439E3B83}") = "Terror in the Deep", "Assembly-CSharp-Editor-firstpass.csproj", "{C0AAAF0E-07E3-E5FD-2FAE-4B87D7D93D59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5266EB2D-14CF-A89D-B00D-E74CB717EF08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5266EB2D-14CF-A89D-B00D-E74CB717EF08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5266EB2D-14CF-A89D-B00D-E74CB717EF08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5266EB2D-14CF-A89D-B00D-E74CB717EF08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0AAAF0E-07E3-E5FD-2FAE-4B87D7D93D59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0AAAF0E-07E3-E5FD-2FAE-4B87D7D93D59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0AAAF0E-07E3-E5FD-2FAE-4B87D7D93D59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0AAAF0E-07E3-E5FD-2FAE-4B87D7D93D59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

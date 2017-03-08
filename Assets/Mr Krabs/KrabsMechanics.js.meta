@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dbd7c482895c44c979e8bbf84c99ad72
+timeCreated: 1488739472
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - Squidward: {instanceID: 0}
+  - MrKrabs: {instanceID: 0}
+  - KrabsSound: {fileID: 8300000, guid: 16fd2b1ade5f043ffae99896361eb679, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

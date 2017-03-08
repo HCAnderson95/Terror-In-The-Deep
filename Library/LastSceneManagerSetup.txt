@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Terror in the Deep.unity
+  isLoaded: 1
+  isActive: 1
