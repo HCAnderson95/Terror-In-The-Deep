@@ -3,10 +3,11 @@
 var Patrick:GameObject;
 var Squidward:GameObject;
 var cam:Camera;
-var PatrickIB:CapsuleCollider;
 var Pcoll:BoxCollider;
 var pos1:Vector3;
 var time:float;
+var targetPosition :Transform; // we have to add in the Inspector our target
+var damp: int = 5; // we can change the slerp velocity here
 var PatrickSound: AudioSource = GetComponent.<AudioSource>();
 
 function Start () {
@@ -18,7 +19,7 @@ function Start () {
 
 	yield WaitForSeconds (time);
   	pos1 = Random.insideUnitSphere * 25.0;
-  	Patrick.transform.position = Vector3(pos1.x + Squidward.transform.position.x, 1, pos1.z + Squidward.transform.position.z);
+  	Patrick.transform.position = Vector3(pos1.x + Squidward.transform.position.x, 0, pos1.z + Squidward.transform.position.z);
   	PatrickSound.Play();
 
   	yield WaitForSeconds (time);
@@ -28,25 +29,31 @@ function Start () {
 
 
 	cam = GameObject.Find("First Person Controller/Main Camera").GetComponent(Camera);
-	PatrickIB = GetComponent.<CapsuleCollider>();
 	Pcoll = GetComponent.<BoxCollider>();
 
 }
 
 function Update(){
 
-	if(Squidward.transform.position.y <= Patrick.transform.position.y)
+	if(Patrick.transform.position.y >= 0)
 	Move();
 
-	if(Patrick.transform.position.y > .9 && Patrick.transform.position.y < 1)
-  	Move();
+	//if(Patrick.transform.position.y > .9 && Patrick.transform.position.y < 1)
+  	//Move();
 }
 
 function Move(){
 	var hit:RaycastHit;//stores the hit info
 	var ray:Ray=cam.ScreenPointToRay(Input.mousePosition);
 
-    	if(!(PatrickIB.Raycast(ray,hit,10.0)) && !(Pcoll.Raycast(ray,hit,10.0))){
+    	if(!(Pcoll.Raycast(ray,hit,10.0))){
+    		if ( targetPosition ) // we get sure the target is here
+     		{
+        		var rotationAngle = Quaternion.LookRotation ( targetPosition.position - transform.position); // we get the angle has to be rotated
+         		transform.rotation = Quaternion.Slerp ( transform.rotation, rotationAngle, Time.deltaTime * damp);
+        	 }
+
   		 	Patrick.transform.position = Vector3.MoveTowards(transform.position, Squidward.transform.position, .07);
+  		 	Patrick.transform.position.y = 0;
   		  }
 }
