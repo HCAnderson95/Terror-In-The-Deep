@@ -3,6 +3,7 @@ var Squidward:GameObject;
 var MrKrabs:GameObject;
 var pos1:Vector3;
 var time:float;
+var time2:float;
 var targetPosition :Transform; // we have to add in the Inspector our target
 var damp: int = 5; // we can change the slerp velocity here
 var KrabsSound: AudioSource = GetComponent.<AudioSource>();
@@ -13,27 +14,28 @@ function Start () {
 	while(true)
 	{
 
-	time = Random.Range(5.0, 10.0);
+	time = Random.Range(10.0, 15.0);
+	time2 = Random.Range(8.0, 11.0);
 
 	yield WaitForSeconds (time);
   	pos1 = Random.insideUnitSphere * 25.0;
   	MrKrabs.transform.position = Vector3(pos1.x + Squidward.transform.position.x, 0, pos1.z + Squidward.transform.position.z);
   	KrabsSound.Play();
 
-  	yield WaitForSeconds (time);
+  	yield WaitForSeconds (time2);
   	MrKrabs.transform.position = Vector3(5,-5,5);
   	}
 }
 
 function Update () {
 
+	//if(Input.GetKeyDown("f"))
+  		//Death();
+  	if(!Input.GetKeyDown("f"))
+  	{
   	if(MrKrabs.transform.position.y >= 0)
-  	Move();
-
-  	//if(MrKrabs.transform.position.y > .9 && MrKrabs.transform.position.y < 1)
-  	//Move();
-
-
+  		Move();
+  		}
 
 }
 
@@ -46,5 +48,12 @@ function Move(){
          		}
   		 	MrKrabs.transform.position = Vector3.MoveTowards(transform.position, Squidward.transform.position, .15);
   		 	MrKrabs.transform.position.y = 0;
+  		 
   		  }
+}
+
+function Death(){
+
+	MrKrabs.transform.position = Vector3.MoveTowards(transform.position, Squidward.transform.position, 0);
+
 }
