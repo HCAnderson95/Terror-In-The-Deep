@@ -1,11 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp-firstpass.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Patrick\PatrickMechanics.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Spongebob/SpongeBobMechanics.js">
     <Files>
-      <File FileName="Assets\SpongeBobMechanics.js" Line="27" Column="14" />
-      <File FileName="Assets\Patrick\PatrickMechanics.js" Line="43" Column="4" />
-      <File FileName="Assets\Character\Light_for_Glove.js" Line="12" Column="1" />
-      <File FileName="Assets\Mr Krabs\KrabsMechanics.js" Line="20" Column="2" />
+      <File FileName="Assets/Patrick/PatrickMechanics.js" Line="40" Column="4" />
+      <File FileName="Assets/Mr Krabs/KrabsMechanics.js" Line="23" Column="1" />
+      <File FileName="Assets/Spongebob/SpongeBobMechanics.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

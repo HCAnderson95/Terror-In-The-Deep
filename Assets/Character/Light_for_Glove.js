@@ -10,15 +10,11 @@ function Start () {
 
 function Update () {
 
-	if (Input.GetKeyDown("e")) 
-	     ToggleGlove();
+	if (Input.GetKeyDown("e")) {
+	    gloveActive = !gloveActive;
+    	LightForGlove.enabled = gloveActive;
+    	LightClick.Play();
+    }
 
 	
-}
-
-function ToggleGlove() {
-	LightClick.Play();
-    gloveActive=!gloveActive;
-    LightForGlove.enabled = gloveActive;
- 
 }

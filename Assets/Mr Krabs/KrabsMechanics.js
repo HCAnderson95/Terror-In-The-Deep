@@ -15,7 +15,7 @@ function Start () {
 	{
 
 	time = Random.Range(10.0, 15.0);
-	time2 = Random.Range(8.0, 11.0);
+	time2 = Random.Range(5.0, 8.0);
 
 	yield WaitForSeconds (time);
   	pos1 = Random.insideUnitSphere * 25.0;
