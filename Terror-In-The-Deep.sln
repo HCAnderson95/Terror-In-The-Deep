@@ -1,9 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terror-In-The-Deep.Plugins", "Terror-In-The-Deep.Plugins.csproj", "{B0D50699-416F-2402-61CC-D3A091A9B857}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terror-In-The-Deep", "Assembly-CSharp-firstpass.csproj", "{5F477B94-F609-3CB9-0D8D-F7CE16EA39AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terror-In-The-Deep.Editor.Plugins", "Terror-In-The-Deep.Editor.Plugins.csproj", "{FDFEA778-967F-0738-5B56-27C4D88C275C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terror-In-The-Deep", "Assembly-CSharp-Editor-firstpass.csproj", "{B341E004-78A5-76C7-0302-479C5AE3A457}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terror-In-The-Deep", "Assembly-UnityScript.unityproj", "{8CF439FC-BFC8-B34A-37C4-848A3CA2896A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,16 +13,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B0D50699-416F-2402-61CC-D3A091A9B857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B0D50699-416F-2402-61CC-D3A091A9B857}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B0D50699-416F-2402-61CC-D3A091A9B857}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B0D50699-416F-2402-61CC-D3A091A9B857}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FDFEA778-967F-0738-5B56-27C4D88C275C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FDFEA778-967F-0738-5B56-27C4D88C275C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FDFEA778-967F-0738-5B56-27C4D88C275C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FDFEA778-967F-0738-5B56-27C4D88C275C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F477B94-F609-3CB9-0D8D-F7CE16EA39AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F477B94-F609-3CB9-0D8D-F7CE16EA39AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F477B94-F609-3CB9-0D8D-F7CE16EA39AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F477B94-F609-3CB9-0D8D-F7CE16EA39AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B341E004-78A5-76C7-0302-479C5AE3A457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B341E004-78A5-76C7-0302-479C5AE3A457}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B341E004-78A5-76C7-0302-479C5AE3A457}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B341E004-78A5-76C7-0302-479C5AE3A457}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CF439FC-BFC8-B34A-37C4-848A3CA2896A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CF439FC-BFC8-B34A-37C4-848A3CA2896A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CF439FC-BFC8-B34A-37C4-848A3CA2896A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CF439FC-BFC8-B34A-37C4-848A3CA2896A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal

@@ -37,15 +37,11 @@ function Start () {
 
 function Update(){
 
-	//guiText.text = "You Dead ";
 
-	//if(Input.GetKeyDown("f"))
-  		//Death();
-  	if(!Input.GetKeyDown("f"))
-  	{
-	if(Patrick.transform.position.y >= 0)
+	if(Patrick.transform.position.y >= 0){
 		Move();
 		}
+	
 
 }
 

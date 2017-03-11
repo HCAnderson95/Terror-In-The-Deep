@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 var LightForGlove : Light; //Add the light source to the torch in Inspector
-private var gloveActive : boolean = false;
+var gloveActive : boolean = false;
 var LightClick: AudioSource = GetComponent.<AudioSource>();
 
 function Start () {
