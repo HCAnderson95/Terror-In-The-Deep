@@ -1,5 +1,4 @@
 ﻿#pragma strict
-
 var Patrick:GameObject;
 var Squidward:GameObject;
 var cam:Camera;
@@ -15,7 +14,6 @@ function Start () {
 
 	while(true)
 	{
-
 	time = Random.Range(8.0, 12.0);
 	time2 = Random.Range(5.0, 8.0);
 
@@ -28,8 +26,6 @@ function Start () {
   	Patrick.transform.position = Vector3(0,-5,0);
 
   }
-
-
 	cam = GameObject.Find("First Person Controller/Main Camera").GetComponent(Camera);
 	Pcoll = GetComponent.<BoxCollider>();
 
@@ -37,26 +33,23 @@ function Start () {
 
 function Update(){
 
-
 	if(Patrick.transform.position.y >= 0){
 		Move();
 		}
-	
-
 }
 
 function Move(){
 	var hit:RaycastHit;//stores the hit info
 	var ray:Ray=cam.ScreenPointToRay(Input.mousePosition);
 
-    	if(!(Pcoll.Raycast(ray,hit,10.0))){
+    	if(!(Pcoll.Raycast(ray,hit,20.0))){
     		if ( targetPosition ) // we get sure the target is here
      		{
         		var rotationAngle = Quaternion.LookRotation ( targetPosition.position - transform.position); // we get the angle has to be rotated
          		transform.rotation = Quaternion.Slerp ( transform.rotation, rotationAngle, Time.deltaTime * damp);
         	 }
 
-  		 	Patrick.transform.position = Vector3.MoveTowards(transform.position, Squidward.transform.position, .07);
+  		 	Patrick.transform.position = Vector3.MoveTowards(transform.position, Squidward.transform.position, .09);
   		 	Patrick.transform.position.y = 0;
 
   		  }

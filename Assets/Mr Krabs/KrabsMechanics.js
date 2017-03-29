@@ -14,7 +14,7 @@ function Start () {
 	while(true)
 	{
 
-	time = Random.Range(10.0, 15.0);
+	time = Random.Range(12.0, 17.0);
 	time2 = Random.Range(5.0, 8.0);
 
 	yield WaitForSeconds (time);
@@ -29,13 +29,8 @@ function Start () {
 
 function Update () {
 
-	//if(Input.GetKeyDown("f"))
-  		//Death();
-  	if(!Input.GetKeyDown("f"))
-  	{
   	if(MrKrabs.transform.position.y >= 0)
   		Move();
-  		}
 
 }
 
@@ -50,10 +45,4 @@ function Move(){
   		 	MrKrabs.transform.position.y = 0;
   		 
   		  }
-}
-
-function Death(){
-
-	MrKrabs.transform.position = Vector3.MoveTowards(transform.position, Squidward.transform.position, 0);
-
 }

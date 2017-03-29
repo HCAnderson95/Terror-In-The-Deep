@@ -41,6 +41,6 @@ function Move(){
         transform.rotation = Quaternion.Slerp ( transform.rotation, rotationAngle, Time.deltaTime * damp);
     }
 
-	SpongeBob.transform.position = Vector3.MoveTowards(transform.position, Squidward.transform.position, .05);
+	SpongeBob.transform.position = Vector3.MoveTowards(transform.position, Squidward.transform.position, .07);
 	SpongeBob.transform.position.y = 0;
 }
