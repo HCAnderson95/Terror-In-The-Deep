@@ -9,18 +9,24 @@ var time2:float;
 var targetPosition :Transform; // we have to add in the Inspector our target
 var damp: int = 5; // we can change the slerp velocity here
 var PatrickSound: AudioSource = GetComponent.<AudioSource>();
+var count:int;
 
 function Start () {
 
+
 	while(true)
 	{
+	count = CharacterMechanics.itemCount;
 	time = Random.Range(8.0, 12.0);
 	time2 = Random.Range(5.0, 8.0);
 
 	yield WaitForSeconds (time);
+	if(count >= 2)
+	{
   	pos1 = Random.insideUnitSphere * 25.0;
   	Patrick.transform.position = Vector3(pos1.x + Squidward.transform.position.x, 0, pos1.z + Squidward.transform.position.z);
   	PatrickSound.Play();
+  	}
 
   	yield WaitForSeconds (time2);
   	Patrick.transform.position = Vector3(0,-5,0);

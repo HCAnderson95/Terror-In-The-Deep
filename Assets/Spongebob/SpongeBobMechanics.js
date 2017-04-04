@@ -8,18 +8,23 @@ var LightForGlove:Light;
 var pos1: Vector3;
 var time:float;
 var time2:float;
+var count:int;
 
 
 function Start () {
 
 	while(true){
+	count = CharacterMechanics.itemCount;
 	time = Random.Range(10.0, 13.0);
 	time2 = Random.Range(5.0, 8.0);
 
 	yield WaitForSeconds (time);
+	if(count >= 1)
+	{
   	pos1 = Random.insideUnitSphere * 25.0;
   	SpongeBob.transform.position = Vector3(pos1.x + Squidward.transform.position.x, 0, pos1.z + Squidward.transform.position.z);
   	SpongeBobSound.Play();
+  	}
 
   	yield WaitForSeconds (time2);
   	SpongeBob.transform.position = Vector3(10,-5,10);

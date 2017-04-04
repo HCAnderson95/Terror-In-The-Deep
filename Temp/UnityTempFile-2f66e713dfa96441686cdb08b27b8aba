@@ -89,6 +89,7 @@
 'Assets/Character/CharacterMechanics.js'
 'Assets/Character/Crosshair.js'
 'Assets/Character/Light_for_Glove.js'
+'Assets/Clarinet/BoquilleroMechanics.js'
 'Assets/Mr Krabs/KrabsMechanics.js'
 'Assets/Patrick/PatrickMechanics.js'
 'Assets/Sandy/SandyMechanics.js'
