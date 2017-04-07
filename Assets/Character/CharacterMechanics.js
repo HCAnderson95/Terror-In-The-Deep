@@ -10,6 +10,10 @@ var MouthPiece:GameObject;
 public static var itemCount:int;
 var scoreText:GUIText;
 var ClarinetSound: AudioSource = GetComponent.<AudioSource>();
+public static var enemyTouch:boolean = false;
+var deathText:GUIText;
+var deathSound: AudioSource = GetComponent.<AudioSource>();
+
 
 function OnTriggerEnter(col:Collider) {
 	if(col.tag == "Boquillero"){
@@ -49,9 +53,20 @@ function OnTriggerEnter(col:Collider) {
 	}
 
 	UpdateScore();
+
+	if(col.tag == "Enemy"){
+		Death();
+	}
     
 }
 
 function UpdateScore () {
     scoreText.text = "Clarinet Pieces: " + itemCount;
+}
+
+function Death(){
+	enemyTouch = true;
+	deathText.text = "You Are Dead.";
+	GameObject.Find("Squidward").GetComponent(CharacterController).enabled = false;
+	deathSound.Play();
 }

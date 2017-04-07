@@ -8,11 +8,12 @@ var targetPosition :Transform; // we have to add in the Inspector our target
 var damp: int = 5; // we can change the slerp velocity here
 var KrabsSound: AudioSource = GetComponent.<AudioSource>();
 var count:int;
+var touch:boolean;
 
 
 function Start () {
 
-	while(true)
+	while(touch == false)
 	{
 	count = CharacterMechanics.itemCount;
 	time = Random.Range(12.0, 17.0);
@@ -34,7 +35,9 @@ function Start () {
 
 function Update () {
 
-  	if(MrKrabs.transform.position.y >= 0)
+	touch = CharacterMechanics.enemyTouch;
+
+  	if(MrKrabs.transform.position.y >= 0 && touch == false)
   		Move();
 
 }
@@ -44,6 +47,8 @@ function Move(){
 			if ( targetPosition ) // we get sure the target is here
      			{
         			var rotationAngle = Quaternion.LookRotation ( targetPosition.position - transform.position); // we get the angle has to be rotated
+        			transform.rotation.x = 0;
+        			transform.rotation.z = 0;
          			transform.rotation = Quaternion.Slerp ( transform.rotation, rotationAngle, Time.deltaTime * damp);
          		}
   		 	MrKrabs.transform.position = Vector3.MoveTowards(transform.position, Squidward.transform.position, .15);

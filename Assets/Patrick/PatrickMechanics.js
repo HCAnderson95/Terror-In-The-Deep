@@ -10,11 +10,12 @@ var targetPosition :Transform; // we have to add in the Inspector our target
 var damp: int = 5; // we can change the slerp velocity here
 var PatrickSound: AudioSource = GetComponent.<AudioSource>();
 var count:int;
+var touch:boolean;
 
 function Start () {
 
 
-	while(true)
+	while(touch == false)
 	{
 	count = CharacterMechanics.itemCount;
 	time = Random.Range(8.0, 12.0);
@@ -39,7 +40,9 @@ function Start () {
 
 function Update(){
 
-	if(Patrick.transform.position.y >= 0){
+	touch = CharacterMechanics.enemyTouch;
+
+	if(Patrick.transform.position.y >= 0 && touch == false){
 		Move();
 		}
 }
@@ -52,6 +55,8 @@ function Move(){
     		if ( targetPosition ) // we get sure the target is here
      		{
         		var rotationAngle = Quaternion.LookRotation ( targetPosition.position - transform.position); // we get the angle has to be rotated
+        		transform.rotation.x = 0;
+        		transform.rotation.z = 0;
          		transform.rotation = Quaternion.Slerp ( transform.rotation, rotationAngle, Time.deltaTime * damp);
         	 }
 

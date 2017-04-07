@@ -9,11 +9,12 @@ var pos1: Vector3;
 var time:float;
 var time2:float;
 var count:int;
+var touch:boolean;
 
 
 function Start () {
 
-	while(true){
+	while(touch == false){
 	count = CharacterMechanics.itemCount;
 	time = Random.Range(10.0, 13.0);
 	time2 = Random.Range(5.0, 8.0);
@@ -33,8 +34,10 @@ function Start () {
 
 function Update () {
 
+	touch = CharacterMechanics.enemyTouch;
+
 	if(SpongeBob.transform.position.y >= 0){
-	if(LightForGlove.enabled)
+	if(LightForGlove.enabled && touch == false)
 	Move();
 	}
 }
@@ -43,6 +46,8 @@ function Move(){
 	if ( targetPosition ) //make sure the target is here
     {
         var rotationAngle = Quaternion.LookRotation ( targetPosition.position - transform.position); // we get the angle has to be rotated
+        transform.rotation.x = 0;
+        transform.rotation.z = 0;
         transform.rotation = Quaternion.Slerp ( transform.rotation, rotationAngle, Time.deltaTime * damp);
     }
 

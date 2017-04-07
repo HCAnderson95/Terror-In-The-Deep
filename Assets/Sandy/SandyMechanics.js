@@ -8,10 +8,11 @@ var targetPosition :Transform; // we have to add in the Inspector our target
 var damp: int = 5; // we can change the slerp velocity here
 var SandySound: AudioSource = GetComponent.<AudioSource>();
 var count:int;
+var touch:boolean;
 
 function Start () {
 
-	while(true)
+	while(touch == false)
 	{
 	count = CharacterMechanics.itemCount;
 	time = Random.Range(7.0, 15.0);
@@ -32,8 +33,10 @@ function Start () {
 }
 
 function Update () {
+
+	touch = CharacterMechanics.enemyTouch;
 	
-	if(Sandy.transform.position.y >= 0){
+	if(Sandy.transform.position.y >= 0 && touch == false){
 		Move();
 	}
 }
@@ -43,6 +46,8 @@ function Move(){
 	if ( targetPosition ) // we get sure the target is here
      {
         var rotationAngle = Quaternion.LookRotation ( targetPosition.position - transform.position);
+        transform.rotation.x = 0;
+        transform.rotation.z = 0;
         transform.rotation = Quaternion.Slerp ( transform.rotation, rotationAngle, Time.deltaTime * damp);
      }
   	Sandy.transform.position = Vector3.MoveTowards(transform.position, Squidward.transform.position, .06);
