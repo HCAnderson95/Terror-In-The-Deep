@@ -1,4 +1,5 @@
 ﻿#pragma strict
+import UnityEngine.SceneManagement;
 
 var Squidward:GameObject;
 var boquillero:GameObject;
@@ -13,6 +14,7 @@ var ClarinetSound: AudioSource = GetComponent.<AudioSource>();
 public static var enemyTouch:boolean = false;
 var deathText:GUIText;
 var deathSound: AudioSource = GetComponent.<AudioSource>();
+
 
 
 function OnTriggerEnter(col:Collider) {
@@ -69,4 +71,7 @@ function Death(){
 	deathText.text = "You Are Dead.";
 	GameObject.Find("Squidward").GetComponent(CharacterController).enabled = false;
 	deathSound.Play();
+
+	yield WaitForSeconds (4.0);
+	SceneManager.LoadScene("Main Menu");
 }
