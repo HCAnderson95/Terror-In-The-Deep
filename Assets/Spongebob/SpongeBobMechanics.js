@@ -1,4 +1,4 @@
-﻿#pragma strict
+#pragma strict
 var SpongeBob:GameObject;
 var Squidward:GameObject;
 var SpongeBobSound: AudioSource = GetComponent.<AudioSource>();
@@ -6,40 +6,48 @@ var targetPosition :Transform; // we have to add in the Inspector our target
 var damp: int = 5; // we can change the slerp velocity here
 var LightForGlove:Light;
 var pos1: Vector3;
-var time:float;
-var time2:float;
+var time:float = 0;
 var count:int;
 var touch:boolean;
-
+var clone:GameObject;
+static var spawned:boolean = false;
+static var timer:float;
 
 function Start () {
-
 	while(touch == false){
 	count = CharacterMechanics.itemCount;
-	time = Random.Range(10.0, 13.0);
-	time2 = Random.Range(5.0, 8.0);
-
-	yield WaitForSeconds (time);
-	if(count >= 1)
-	{
-  	pos1 = Random.insideUnitSphere * 25.0;
-  	SpongeBob.transform.position = Vector3(pos1.x + Squidward.transform.position.x, 0, pos1.z + Squidward.transform.position.z);
-  	SpongeBobSound.Play();
-  	}
-
-  	yield WaitForSeconds (time2);
-  	SpongeBob.transform.position = Vector3(10,-5,10);
+	yield WaitForSeconds (5);
+	timer += 5;
   	}
 }
 
 function Update () {
-
+	if(!spawned){
+		if (count >= 1 && timer >= 30){
+			spawned = true;
+			pos1 = Random.insideUnitSphere * 25.0;
+  			clone = Instantiate(SpongeBob, new Vector3(pos1.x + Squidward.transform.position.x, 0, pos1.z + Squidward.transform.position.z), Quaternion.identity);
+  			SpongeBobSound.Play();
+		}
+	}
 	touch = CharacterMechanics.enemyTouch;
 
 	if(SpongeBob.transform.position.y >= 0){
-	if(LightForGlove.enabled && touch == false)
-	Move();
+		if(LightForGlove.enabled && touch == false){
+			Move();
+			}
 	}
+	if(!LightForGlove.enabled){
+	time += Time.deltaTime;
+	if(time >= 4){
+		timer = 0;
+		Destroy (clone, 1);
+		time = 0;
+		spawned = false;
+		}
+	}
+	else
+		time = 0;
 }
 
 function Move(){
