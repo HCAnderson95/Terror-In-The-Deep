@@ -24,6 +24,9 @@ function Start () {
 }
 
 function Update () {
+
+	Debug.Log(timer);
+	Debug.Log(spawned);
 	if(!spawned){
 		if(count >= 4 && timer >= 30)
 		{
@@ -33,8 +36,8 @@ function Update () {
   			KrabsSound.Play();
   		}
 	}
-	touch = CharacterMechanics.enemyTouch;
 
+	touch = CharacterMechanics.enemyTouch;
   	if(MrKrabs.transform.position.y >= 0 && touch == false){
   		Move();
   	}
