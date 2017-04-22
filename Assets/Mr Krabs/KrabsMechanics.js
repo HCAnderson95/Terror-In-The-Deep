@@ -6,6 +6,7 @@ var time:float;
 var targetPosition :Transform; // we have to add in the Inspector our target
 var damp: int = 5; // we can change the slerp velocity here
 var KrabsSound: AudioSource = GetComponent.<AudioSource>();
+var agent: UnityEngine.AI.NavMeshAgent = GetComponent.<UnityEngine.AI.NavMeshAgent>();
 var count:int;
 var touch:boolean;
 var clone:GameObject;
@@ -13,7 +14,7 @@ static var spawned:boolean = false;
 static var timer:float;
 
 function Start () {
-
+	agent.enabled = false;
 	while(touch == false)
 	{
 	count = CharacterMechanics.itemCount;
@@ -32,7 +33,8 @@ function Update () {
 		{
 			spawned = true;
   			pos1 = Random.insideUnitSphere * 25.0;
-  			clone = Instantiate(MrKrabs, new Vector3(pos1.x + Squidward.transform.position.x, 0, pos1.z + Squidward.transform.position.z), Quaternion.identity);
+  			MrKrabs.transform.position = Vector3(pos1.x + Squidward.transform.position.x, 0, pos1.z + Squidward.transform.position.z);
+  			agent.enabled = true;
   			KrabsSound.Play();
   		}
 	}
@@ -43,7 +45,8 @@ function Update () {
   	}
  	if(time >= 4){
  	 	timer = 0;
-		Destroy (this.gameObject, 0.2);
+ 	 	agent.enabled = false;
+		MrKrabs.transform.position = Vector3(5, -5, 5);
 	 	spawned = false;
 		time = 0;
   	}
@@ -52,18 +55,13 @@ function Update () {
 function Move(){
 		if(Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d")){
 			time = 0;
+			agent.Resume();
 			if ( targetPosition ) // we get sure the target is here
-     			{
-        			var rotationAngle = Quaternion.LookRotation ( targetPosition.position - transform.position); // we get the angle has to be rotated
-        			transform.rotation.x = 0;
-        			transform.rotation.z = 0;
-         			transform.rotation = Quaternion.Slerp ( transform.rotation, rotationAngle, Time.deltaTime * damp);
-         		}
-  		 	MrKrabs.transform.position = Vector3.MoveTowards(transform.position, Squidward.transform.position, .15);
-  		 	MrKrabs.transform.position.y = 0;
-  		 
+     			agent.destination = targetPosition.position;
   		  }
   		  else{
+  		  	agent.velocity = Vector3.zero;
+			agent.Stop();
   		  	time += Time.deltaTime;
   		  }
 }

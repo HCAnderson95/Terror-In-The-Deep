@@ -30,7 +30,7 @@ function Start () {
 
 function Update(){
 	if(!spawned){
-		if(count >= 2 && timer >= 5){
+		if(count >= 2 && timer >= 20){
 			spawned = true;
   			pos1 = Random.insideUnitSphere * 25.0;
   			Patrick.transform.position = Vector3(pos1.x + Squidward.transform.position.x, 0, pos1.z + Squidward.transform.position.z);
