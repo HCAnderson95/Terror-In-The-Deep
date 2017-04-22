@@ -3,47 +3,50 @@ var Squidward:GameObject;
 var MrKrabs:GameObject;
 var pos1:Vector3;
 var time:float;
-var time2:float;
 var targetPosition :Transform; // we have to add in the Inspector our target
 var damp: int = 5; // we can change the slerp velocity here
 var KrabsSound: AudioSource = GetComponent.<AudioSource>();
 var count:int;
 var touch:boolean;
-
+var clone:GameObject;
+static var spawned:boolean = false;
+static var timer:float;
 
 function Start () {
 
 	while(touch == false)
 	{
 	count = CharacterMechanics.itemCount;
-	time = Random.Range(12.0, 17.0);
-	time2 = Random.Range(5.0, 8.0);
-
-	yield WaitForSeconds (time);
-	if(count >= 4)
-	{
-  	pos1 = Random.insideUnitSphere * 25.0;
-  	MrKrabs.transform.position = Vector3(pos1.x + Squidward.transform.position.x, 0, pos1.z + Squidward.transform.position.z);
-  	KrabsSound.Play();
-  	}
-
-  	yield WaitForSeconds (time2);
-  	MrKrabs.transform.position = Vector3(5,-5,5);
+	yield WaitForSeconds (5);
+	timer += 5;
   	}
 
 }
 
 function Update () {
-
+	if(count >= 4 && timer >= 30)
+	{
+		spawned = true;
+  		pos1 = Random.insideUnitSphere * 25.0;
+  		clone = Instantiate(MrKrabs, new Vector3(pos1.x + Squidward.transform.position.x, 0, pos1.z + Squidward.transform.position.z), Quaternion.identity);
+  		KrabsSound.Play();
+  	}
 	touch = CharacterMechanics.enemyTouch;
 
-  	if(MrKrabs.transform.position.y >= 0 && touch == false)
+  	if(MrKrabs.transform.position.y >= 0 && touch == false){
   		Move();
-
+  	}
+ 	if(time >= 4){
+ 	 	timer = 0;
+		Destroy (this.gameObject, 0.2);
+	 	spawned = false;
+		time = 0;
+  	}
 }
 
 function Move(){
 		if(Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d")){
+			time = 0;
 			if ( targetPosition ) // we get sure the target is here
      			{
         			var rotationAngle = Quaternion.LookRotation ( targetPosition.position - transform.position); // we get the angle has to be rotated
@@ -54,5 +57,8 @@ function Move(){
   		 	MrKrabs.transform.position = Vector3.MoveTowards(transform.position, Squidward.transform.position, .15);
   		 	MrKrabs.transform.position.y = 0;
   		 
+  		  }
+  		  else{
+  		  	time += Time.deltaTime;
   		  }
 }

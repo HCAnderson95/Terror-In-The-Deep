@@ -22,12 +22,12 @@ function Start () {
 	if(count >= 6)
 	{
   	pos1 = Random.insideUnitSphere * 25.0;
-  	Sandy.transform.position = Vector3(pos1.x + Squidward.transform.position.x, 0, pos1.z + Squidward.transform.position.z);
+  	var clone = Instantiate (Sandy, new Vector3(pos1.x + Squidward.transform.position.x, 0, pos1.z + Squidward.transform.position.z), Quaternion.identity);
   	SandySound.Play();
   	}
 
-  	yield WaitForSeconds (time2);
-  	Sandy.transform.position = Vector3(15,-5,15);
+  	Destroy (clone, 8.0);
+
   }
 
 }
