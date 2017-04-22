@@ -9,6 +9,8 @@ var quitColl:BoxCollider;
 var introSong: AudioSource = GetComponent.<AudioSource>();
 
 function Start () {
+	Cursor.visible = true;
+	Cursor.lockState = CursorLockMode.None;
 	introSong.Play();
 }
 

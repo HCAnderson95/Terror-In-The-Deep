@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Terror in the Deep.unity
+- path: Assets/Main Menu.unity
   isLoaded: 1
   isActive: 1
