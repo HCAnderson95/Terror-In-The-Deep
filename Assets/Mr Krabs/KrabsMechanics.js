@@ -14,6 +14,8 @@ static var spawned:boolean = false;
 static var timer:float;
 
 function Start () {
+	timer = 0;
+	spawned = false;
 	agent.enabled = false;
 	while(touch == false)
 	{
@@ -25,7 +27,7 @@ function Start () {
 }
 
 function Update () {
-
+	
 	Debug.Log(timer);
 	Debug.Log(spawned);
 	if(!spawned){

@@ -12,6 +12,7 @@ var count:int;
 var touch:boolean;
 static var spawned:boolean = false;
 function Start () {
+	spawned = false;
 	agent.enabled = false;
 	while(touch == false)
 	{

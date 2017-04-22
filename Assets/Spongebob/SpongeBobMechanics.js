@@ -16,6 +16,8 @@ static var spawned:boolean = false;
 static var timer:float;
 
 function Start () {
+	timer = 0;
+	spawned = false;
 	anim = GetComponent("Animator");
 	agent.enabled = false;
 	while(touch == false){
@@ -26,6 +28,7 @@ function Start () {
 }
 
 function Update () {
+	Debug.Log("Spongebob timer" + timer);
 	if(!spawned){
 		if (count >= 1 && timer >= 10){
 			spawned = true;

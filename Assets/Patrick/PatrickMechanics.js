@@ -16,6 +16,8 @@ static var spawned:boolean = false;
 static var timer:float;
 
 function Start () {
+	timer = 0;
+	spawned = false;
 	anim = GetComponent("Animator");
 	agent.enabled = false;
 	while(touch == false)
@@ -24,7 +26,6 @@ function Start () {
 		yield WaitForSeconds (5);
 		timer += 5;
   	}
-	cam = GameObject.Find("First Person Controller/Main Camera").GetComponent(Camera);
 	Pcoll = GetComponent.<BoxCollider>();
 }
 

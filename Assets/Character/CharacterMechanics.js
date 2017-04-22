@@ -73,5 +73,8 @@ function Death(){
 	deathSound.Play();
 
 	yield WaitForSeconds (4.0);
-	SceneManager.LoadScene("Main Menu");
+	GameObject.Find("Squidward").GetComponent(CharacterController).enabled = true;
+	enemyTouch = false;
+	itemCount = 0;
+	Application.LoadLevel("Main Menu");
 }
