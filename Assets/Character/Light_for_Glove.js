@@ -2,7 +2,7 @@
 
 var LightForGlove : Light; //Add the light source to the torch in Inspector
 var gloveActive : boolean = true;
-var LightClick: AudioSource = GetComponent.<AudioSource>();
+var LightClick: AudioSource;
 
 function Start () {
 }

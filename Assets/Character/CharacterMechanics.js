@@ -10,11 +10,10 @@ var peg:GameObject;
 var MouthPiece:GameObject;
 public static var itemCount:int;
 var scoreText:GUIText;
-var ClarinetSound: AudioSource = GetComponent.<AudioSource>();
+var ClarinetSound: AudioSource;
 public static var enemyTouch:boolean = false;
 var deathText:GUIText;
-var deathSound: AudioSource = GetComponent.<AudioSource>();
-
+var deathSound: AudioSource;
 
 
 function OnTriggerEnter(col:Collider) {

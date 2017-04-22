@@ -2,8 +2,8 @@
 import UnityEngine.AI;
 var SpongeBob:GameObject;
 var Squidward:GameObject;
-var SpongeBobSound: AudioSource = GetComponent.<AudioSource>();
-var agent: UnityEngine.AI.NavMeshAgent = GetComponent.<UnityEngine.AI.NavMeshAgent>();
+var SpongeBobSound: AudioSource;
+var agent: UnityEngine.AI.NavMeshAgent;
 var targetPosition :Transform; // we have to add in the Inspector our target
 var damp: int = 5; // we can change the slerp velocity here
 var LightForGlove:Light;
@@ -16,6 +16,7 @@ static var spawned:boolean = false;
 static var timer:float;
 
 function Start () {
+	agent = GetComponent.<UnityEngine.AI.NavMeshAgent>();
 	timer = 0;
 	spawned = false;
 	anim = GetComponent("Animator");

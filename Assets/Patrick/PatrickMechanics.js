@@ -6,8 +6,8 @@ var Pcoll:BoxCollider;
 var pos1:Vector3;
 var targetPosition :Transform; // we have to add in the Inspector our target
 var damp: int = 5; // we can change the slerp velocity here
-var PatrickSound: AudioSource = GetComponent.<AudioSource>();
-var agent: UnityEngine.AI.NavMeshAgent = GetComponent.<UnityEngine.AI.NavMeshAgent>();
+var PatrickSound: AudioSource;
+var agent: UnityEngine.AI.NavMeshAgent;
 var count:int;
 var touch:boolean;
 var time:float;
@@ -16,6 +16,8 @@ static var spawned:boolean = false;
 static var timer:float;
 
 function Start () {
+	agent = GetComponent.<UnityEngine.AI.NavMeshAgent>();
+
 	timer = 0;
 	spawned = false;
 	anim = GetComponent("Animator");

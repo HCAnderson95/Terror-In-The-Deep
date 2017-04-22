@@ -6,7 +6,7 @@ var playText:GUIText;
 var quitText:GUIText;
 var playColl:BoxCollider;
 var quitColl:BoxCollider;
-var introSong: AudioSource = GetComponent.<AudioSource>();
+var introSong: AudioSource;
 
 function Start () {
 	Cursor.visible = true;
