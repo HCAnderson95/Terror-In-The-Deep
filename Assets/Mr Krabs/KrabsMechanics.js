@@ -24,13 +24,15 @@ function Start () {
 }
 
 function Update () {
-	if(count >= 4 && timer >= 30)
-	{
-		spawned = true;
-  		pos1 = Random.insideUnitSphere * 25.0;
-  		clone = Instantiate(MrKrabs, new Vector3(pos1.x + Squidward.transform.position.x, 0, pos1.z + Squidward.transform.position.z), Quaternion.identity);
-  		KrabsSound.Play();
-  	}
+	if(!spawned){
+		if(count >= 4 && timer >= 30)
+		{
+			spawned = true;
+  			pos1 = Random.insideUnitSphere * 25.0;
+  			clone = Instantiate(MrKrabs, new Vector3(pos1.x + Squidward.transform.position.x, 0, pos1.z + Squidward.transform.position.z), Quaternion.identity);
+  			KrabsSound.Play();
+  		}
+	}
 	touch = CharacterMechanics.enemyTouch;
 
   	if(MrKrabs.transform.position.y >= 0 && touch == false){
