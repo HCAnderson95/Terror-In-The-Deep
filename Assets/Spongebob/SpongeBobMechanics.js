@@ -10,10 +10,12 @@ var time:float = 0;
 var count:int;
 var touch:boolean;
 var clone:GameObject;
+var anim: Animator;
 static var spawned:boolean = false;
 static var timer:float;
 
 function Start () {
+	anim = GetComponent("Animator");
 	while(touch == false){
 	count = CharacterMechanics.itemCount;
 	yield WaitForSeconds (5);
@@ -31,11 +33,14 @@ function Update () {
 		}
 	}
 	touch = CharacterMechanics.enemyTouch;
-
 	if(SpongeBob.transform.position.y >= 0){
 		if(LightForGlove.enabled && touch == false){
 			Move();
+			anim.speed = 1;
 			}
+		else{
+			anim.speed = 0;
+		}
 	}
 	if(!LightForGlove.enabled){
 	time += Time.deltaTime;

@@ -11,12 +11,13 @@ var count:int;
 var touch:boolean;
 var clone:GameObject;
 var time:float;
+var anim: Animator;
 static var spawned:boolean = false;
 static var timer:float;
 
 function Start () {
-
-
+	anim = GetComponent("Animator");
+	
 	while(touch == false)
 	{
 		count = CharacterMechanics.itemCount;
@@ -56,6 +57,7 @@ function Move(){
 	var ray:Ray=cam.ScreenPointToRay(Input.mousePosition);
 
     	if(!(Pcoll.Raycast(ray,hit,20.0))){
+    		anim.speed = 1;
     		time = 0;
     		if ( targetPosition ) // we get sure the target is here
      		{
@@ -71,6 +73,7 @@ function Move(){
   		  }
   		else
   		{
+ 			anim.speed = 0;
   			time += Time.deltaTime;
   		}
 }
