@@ -10,12 +10,13 @@ var agent: UnityEngine.AI.NavMeshAgent;
 var count:int;
 var touch:boolean;
 var clone:GameObject;
+var anim: Animator;
 static var spawned:boolean = false;
 static var timer:float;
 
 function Start () {
 	agent = GetComponent.<UnityEngine.AI.NavMeshAgent>();
-
+	anim = GetComponent("Animator");
 	timer = 0;
 	spawned = false;
 	agent.enabled = false;
@@ -58,12 +59,14 @@ function Update () {
 
 function Move(){
 		if(Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d")){
+			anim.speed = 1;
 			time = 0;
 			agent.Resume();
 			if ( targetPosition ) // we get sure the target is here
      			agent.destination = targetPosition.position;
   		  }
   		  else{
+  		  	anim.speed = 0;
   		  	agent.velocity = Vector3.zero;
 			agent.Stop();
   		  	time += Time.deltaTime;
