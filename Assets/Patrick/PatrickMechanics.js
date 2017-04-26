@@ -7,6 +7,7 @@ var pos1:Vector3;
 var targetPosition :Transform; // we have to add in the Inspector our target
 var damp: int = 5; // we can change the slerp velocity here
 var PatrickSound: AudioSource;
+var Bubbles: AudioSource;
 var agent: UnityEngine.AI.NavMeshAgent;
 var count:int;
 var touch:boolean;
@@ -53,6 +54,7 @@ function Update(){
 	  	Patrick.transform.position = Vector3(0,-5,0);
 	  	spawned = false;
 	  	time = 0;
+	  	Bubbles.Play();
   	}
 }
 

@@ -7,10 +7,12 @@ var time2:float;
 var targetPosition :Transform; // we have to add in the Inspector our target
 var damp: int = 5; // we can change the slerp velocity here
 var SandySound: AudioSource;
+var Bubbles: AudioSource;
 var agent: UnityEngine.AI.NavMeshAgent;
 var count:int;
 var touch:boolean;
 static var spawned:boolean = false;
+
 function Start () {
 	agent = GetComponent.<UnityEngine.AI.NavMeshAgent>();
 

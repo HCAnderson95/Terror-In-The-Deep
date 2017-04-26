@@ -3,6 +3,7 @@ import UnityEngine.AI;
 var SpongeBob:GameObject;
 var Squidward:GameObject;
 var SpongeBobSound: AudioSource;
+var Bubbles: AudioSource;
 var agent: UnityEngine.AI.NavMeshAgent;
 var targetPosition :Transform; // we have to add in the Inspector our target
 var damp: int = 5; // we can change the slerp velocity here
@@ -59,6 +60,7 @@ function Update () {
 				SpongeBob.transform.position = Vector3(10, -5, 10);
 				time = 0;
 				spawned = false;
+				Bubbles.Play();
 			}
 		}
 		else

@@ -6,6 +6,7 @@ var time:float;
 var targetPosition :Transform; // we have to add in the Inspector our target
 var damp: int = 5; // we can change the slerp velocity here
 var KrabsSound: AudioSource;
+var Bubbles: AudioSource;
 var agent: UnityEngine.AI.NavMeshAgent;
 var count:int;
 var touch:boolean;
@@ -54,6 +55,7 @@ function Update () {
 		MrKrabs.transform.position = Vector3(5, -5, 5);
 	 	spawned = false;
 		time = 0;
+		Bubbles.Play();
   	}
 }
 
