@@ -1,0 +1,532 @@
+# Material file for downtownbikinibottom.obj
+
+newmtl mesh0002mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0002_0.png
+
+newmtl mesh0005mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0005_0.png
+
+newmtl mesh0007mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0007_0.png
+
+newmtl mesh0011mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0011_0.png
+
+newmtl mesh0019mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0019_0.png
+
+newmtl mesh0026mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0026_0.png
+
+newmtl mesh0043mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0043_0.png
+
+newmtl mesh0049mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0049_0.png
+
+newmtl mesh0050mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0050_0.png
+
+newmtl mesh0058mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0058_0.png
+
+newmtl mesh0074mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0074_0.png
+
+newmtl mesh0085mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0085_0.png
+
+newmtl mesh0101mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0101_0.png
+
+newmtl mesh0104mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0104_0.png
+
+newmtl mesh0110mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0110_0.png
+
+newmtl mesh0120mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0120_0.png
+
+newmtl mesh0121mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0121_0.png
+
+newmtl mesh0122mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0122_0.png
+
+newmtl mesh0124mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0124_0.png
+
+newmtl mesh0129mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0129_0.png
+
+newmtl mesh0139mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0139_0.png
+
+newmtl mesh0160mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0160_0.png
+
+newmtl mesh0172mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0172_0.png
+
+newmtl mesh0185mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0185_0.png
+
+newmtl mesh0188mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0188_0.png
+
+newmtl mesh0207mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0207_0.png
+
+newmtl mesh0227mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0227_0.png
+
+newmtl mesh0229mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0229_0.png
+
+newmtl mesh0248mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0248_0.png
+
+newmtl mesh0249mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0249_0.png
+
+newmtl mesh0251mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0251_0.png
+
+newmtl mesh0252mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0252_0.png
+
+newmtl mesh0260mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0260_0.png
+
+newmtl mesh0261mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0261_0.png
+
+newmtl mesh0267mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0267_0.png
+
+newmtl mesh0273mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0273_0.png
+
+newmtl mesh0276mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0276_0.png
+
+newmtl mesh0278mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0278_0.png
+
+newmtl mesh0289mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0289_0.png
+
+newmtl mesh0290mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0290_0.png
+
+newmtl mesh0294mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0294_0.png
+
+newmtl mesh0307mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0307_0.png
+
+newmtl mesh0310mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0310_0.png
+
+newmtl mesh0313mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0313_0.png
+
+newmtl mesh0318mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0318_0.png
+
+newmtl mesh0322mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0322_0.png
+
+newmtl mesh0324mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0324_0.png
+
+newmtl mesh0326mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0326_0.png
+
+newmtl mesh0327mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0327_0.png
+
+newmtl mesh0343mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0343_0.png
+
+newmtl mesh0362mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0362_0.png
+
+newmtl mesh0363mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0363_0.png
+
+newmtl mesh0365mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0365_0.png
+
+newmtl mesh0369mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0369_0.png
+
+newmtl mesh0373mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0373_0.png
+
+newmtl mesh0376mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0376_0.png
+
+newmtl mesh0379mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+
+newmtl mesh0383mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0383_0.png
+
+newmtl mesh0384mat
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.0 0.0 0.0
+	map_Kd t0384_0.png
+
