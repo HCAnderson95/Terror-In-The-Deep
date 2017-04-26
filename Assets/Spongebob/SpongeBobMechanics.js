@@ -15,6 +15,7 @@ var touch:boolean;
 var anim: Animator;
 static var spawned:boolean = false;
 static var timer:float;
+var spongeNextSpawn:Vector3;
 
 function Start () {
 	agent = GetComponent.<UnityEngine.AI.NavMeshAgent>();
@@ -30,12 +31,15 @@ function Start () {
 }
 
 function Update () {
+	spongeNextSpawn = Respawn.nextSpawn;
+
+
 	Debug.Log("Spongebob timer" + timer);
 	if(!spawned){
 		if (count >= 1 && timer >= 10){
 			spawned = true;
 			pos1 = Random.insideUnitSphere * 25.0;
-			SpongeBob.transform.position = Vector3(pos1.x + Squidward.transform.position.x, 0, pos1.z + Squidward.transform.position.z);
+			SpongeBob.transform.position = spongeNextSpawn;
 			agent.enabled = true;
   			SpongeBobSound.Play();
 		}
