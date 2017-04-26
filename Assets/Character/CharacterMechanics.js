@@ -8,12 +8,14 @@ var bell:GameObject;
 var reed:GameObject;
 var peg:GameObject;
 var MouthPiece:GameObject;
-public static var itemCount:int;
+public static var itemCount:int = 0;
 var scoreText:GUIText;
 var ClarinetSound: AudioSource;
 public static var enemyTouch:boolean = false;
 var deathText:GUIText;
+var winText:GUIText;
 var deathSound: AudioSource;
+
 
 
 function OnTriggerEnter(col:Collider) {
@@ -58,6 +60,11 @@ function OnTriggerEnter(col:Collider) {
 	if(col.tag == "Enemy"){
 		Death();
 	}
+
+	if(col.tag == "Bus")
+	{
+		Win();
+	}
     
 }
 
@@ -76,4 +83,20 @@ function Death(){
 	enemyTouch = false;
 	itemCount = 0;
 	Application.LoadLevel("Main Menu");
+}
+
+function Win(){
+
+	if(itemCount >= 6)
+	{
+		winText.text = "You Escaped With the Clarinet Pieces.";
+		enemyTouch = true;
+		GameObject.Find("Squidward").GetComponent(CharacterController).enabled = false;
+
+		yield WaitForSeconds (4.0);
+		GameObject.Find("Squidward").GetComponent(CharacterController).enabled = true;
+		enemyTouch = false;
+		itemCount = 0;
+		Application.LoadLevel("Main Menu");
+	}
 }
