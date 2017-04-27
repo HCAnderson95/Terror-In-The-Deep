@@ -2,37 +2,37 @@
 public static var mpRand:int;
 
 function Start () {
-	mpRand = Random.Range(1,18);
+	mpRand = Random.Range(1,17);
 
-	for(var i:int = 0; i < 18; i++)
+	for(var i:int = 0; i < 17; i++)
 	{
 		if(mpRand == PegLocation.pegRand)
 		{
-			mpRand = Random.Range(1,18);
+			mpRand = Random.Range(1,17);
 			i = 0;
 		}
 
 		if(mpRand == ReedLocation.reedRand)
 		{
-			mpRand = Random.Range(1,18);
+			mpRand = Random.Range(1,17);
 			i = 0;
 		}
 
 		if(mpRand == BarLocation.barRand)
 		{
-			mpRand = Random.Range(1,18);
+			mpRand = Random.Range(1,17);
 			i = 0;
 		}
 
 		if(mpRand == BoqLocation.boqRand)
 		{
-			mpRand = Random.Range(1,18);
+			mpRand = Random.Range(1,17);
 			i = 0;
 		}
 
 		if(mpRand == BellLocation.bellRand)
 		{
-			mpRand = Random.Range(1,18);
+			mpRand = Random.Range(1,17);
 			i = 0;
 		}
 	}
@@ -74,7 +74,7 @@ function Start () {
 		transform.position = Vector3(103,1,-29);
 
 	else if(mpRand == 13)
-		transform.position = Vector3(78,-5,8);
+		transform.position = Vector3(143,1,-16);
 
 	else if(mpRand == 14)
 		transform.position = Vector3(98,1,12);
@@ -88,8 +88,6 @@ function Start () {
 	else if(mpRand == 17)
 		transform.position = Vector3(150,1,-6);
 
-	else if(mpRand == 18)
-		transform.position = Vector3(143,1,-16);
 }
 
 function Update () {

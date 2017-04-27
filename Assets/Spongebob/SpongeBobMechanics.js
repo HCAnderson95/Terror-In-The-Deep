@@ -34,7 +34,6 @@ function Update () {
 	spongeNextSpawn = Respawn.nextSpawn;
 
 
-	Debug.Log("Spongebob timer" + timer);
 	if(!spawned){
 		if (count >= 1 && timer >= 10){
 			spawned = true;
@@ -70,6 +69,8 @@ function Update () {
 		else
 			time = 0;
 	}
+	if (touch)
+		anim.speed = 0;
 }
 
 function Move(){

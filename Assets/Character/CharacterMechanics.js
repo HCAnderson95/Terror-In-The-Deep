@@ -15,8 +15,11 @@ public static var enemyTouch:boolean = false;
 var deathText:GUIText;
 var winText:GUIText;
 var deathSound: AudioSource;
+var ambient: AudioSource;
 
-
+function Start(){
+	ambient.Play();
+}
 
 function OnTriggerEnter(col:Collider) {
 	if(col.tag == "Boquillero"){

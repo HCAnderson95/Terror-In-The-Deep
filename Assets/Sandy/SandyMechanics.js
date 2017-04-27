@@ -11,11 +11,12 @@ var Bubbles: AudioSource;
 var agent: UnityEngine.AI.NavMeshAgent;
 var count:int;
 var touch:boolean;
+var anim: Animator;
 static var spawned:boolean = false;
-
+var sandyNextSpawn:Vector3;
 function Start () {
 	agent = GetComponent.<UnityEngine.AI.NavMeshAgent>();
-
+	anim = GetComponent("Animator");
 	spawned = false;
 	agent.enabled = false;
 	while(touch == false)
@@ -35,12 +36,14 @@ function Start () {
 }
 
 function Update () {
-
+	sandyNextSpawn = Respawn.nextSpawn;
 	touch = CharacterMechanics.enemyTouch;
 	
 	if(Sandy.transform.position.y >= 0 && touch == false){
 		Move();
 	}
+	if (touch)
+		anim.speed = 0;
 }
 
 function Move(){

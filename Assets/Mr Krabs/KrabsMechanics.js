@@ -14,7 +14,7 @@ var clone:GameObject;
 var anim: Animator;
 static var spawned:boolean = false;
 static var timer:float;
-
+var KrabsNextSpawn:Vector3;
 function Start () {
 	agent = GetComponent.<UnityEngine.AI.NavMeshAgent>();
 	anim = GetComponent("Animator");
@@ -31,15 +31,13 @@ function Start () {
 }
 
 function Update () {
-	
-	Debug.Log(timer);
-	Debug.Log(spawned);
+	KrabsNextSpawn = Respawn.nextSpawn;
 	if(!spawned){
 		if(count >= 4 && timer >= 30)
 		{
 			spawned = true;
   			pos1 = Random.insideUnitSphere * 25.0;
-  			MrKrabs.transform.position = Vector3(pos1.x + Squidward.transform.position.x, 0, pos1.z + Squidward.transform.position.z);
+  			MrKrabs.transform.position = KrabsNextSpawn;
   			agent.enabled = true;
   			KrabsSound.Play();
   		}
@@ -57,6 +55,8 @@ function Update () {
 		time = 0;
 		Bubbles.Play();
   	}
+  	if (touch)
+		anim.speed = 0;
 }
 
 function Move(){

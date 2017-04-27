@@ -15,7 +15,7 @@ var time:float;
 var anim: Animator;
 static var spawned:boolean = false;
 static var timer:float;
-
+var patrickNextSpawn:Vector3;
 function Start () {
 	agent = GetComponent.<UnityEngine.AI.NavMeshAgent>();
 
@@ -33,11 +33,12 @@ function Start () {
 }
 
 function Update(){
+	patrickNextSpawn = Respawn.nextSpawn;
 	if(!spawned){
 		if(count >= 2 && timer >= 20){
 			spawned = true;
   			pos1 = Random.insideUnitSphere * 25.0;
-  			Patrick.transform.position = Vector3(pos1.x + Squidward.transform.position.x, 0, pos1.z + Squidward.transform.position.z);
+  			Patrick.transform.position = patrickNextSpawn;
   			agent.enabled = true;
   			PatrickSound.Play();
   		}
@@ -56,6 +57,8 @@ function Update(){
 	  	time = 0;
 	  	Bubbles.Play();
   	}
+  	if (touch)
+		anim.speed = 0;
 }
 
 function Move(){

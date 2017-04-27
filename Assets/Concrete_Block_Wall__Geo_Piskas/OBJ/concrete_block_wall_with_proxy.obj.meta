@@ -1,0 +1,215 @@
+fileFormatVersion: 2
+guid: f7821ca46160349fba27e415b3ef6dd5
+timeCreated: 1493253434
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: concrete_block_pile_large
+    100002: concrete_block_pile_messy
+    100004: concrete_block_pile_small
+    100006: concrete_block_single
+    100008: concrete_block_wall_large
+    100010: concrete_block_wall_large_messy
+    100012: concrete_block_wall_med
+    100014: concrete_block_wall_med_messy
+    100016: concrete_block_wall_small
+    100018: concrete_block_wall_small_messy_1
+    100020: concrete_block_wall_small_messy_2
+    100022: concrete_block_wall_small_messy_3
+    100024: //RootNode
+    100026: concrete_column
+    100028: concrete_column_bar_large_1
+    100030: concrete_column_bar_large_2
+    100032: concrete_column_bar_large_3
+    100034: concrete_column_bar_large_4
+    100036: concrete_column_bar_small_1
+    100038: concrete_column_bar_small_2
+    100040: concrete_column_bar_small_3
+    100042: concrete_column_bar_small_4
+    100044: concrete_column_damaged_1
+    100046: concrete_column_damaged_2
+    400000: concrete_block_pile_large
+    400002: concrete_block_pile_messy
+    400004: concrete_block_pile_small
+    400006: concrete_block_single
+    400008: concrete_block_wall_large
+    400010: concrete_block_wall_large_messy
+    400012: concrete_block_wall_med
+    400014: concrete_block_wall_med_messy
+    400016: concrete_block_wall_small
+    400018: concrete_block_wall_small_messy_1
+    400020: concrete_block_wall_small_messy_2
+    400022: concrete_block_wall_small_messy_3
+    400024: //RootNode
+    400026: concrete_column
+    400028: concrete_column_bar_large_1
+    400030: concrete_column_bar_large_2
+    400032: concrete_column_bar_large_3
+    400034: concrete_column_bar_large_4
+    400036: concrete_column_bar_small_1
+    400038: concrete_column_bar_small_2
+    400040: concrete_column_bar_small_3
+    400042: concrete_column_bar_small_4
+    400044: concrete_column_damaged_1
+    400046: concrete_column_damaged_2
+    2300000: concrete_block_pile_large
+    2300002: concrete_block_pile_messy
+    2300004: concrete_block_pile_small
+    2300006: concrete_block_single
+    2300008: concrete_block_wall_large
+    2300010: concrete_block_wall_large_messy
+    2300012: concrete_block_wall_med
+    2300014: concrete_block_wall_med_messy
+    2300016: concrete_block_wall_small
+    2300018: concrete_block_wall_small_messy_1
+    2300020: concrete_block_wall_small_messy_2
+    2300022: concrete_block_wall_small_messy_3
+    2300024: concrete_column
+    2300026: concrete_column_bar_large_1
+    2300028: concrete_column_bar_large_2
+    2300030: concrete_column_bar_large_3
+    2300032: concrete_column_bar_large_4
+    2300034: concrete_column_bar_small_1
+    2300036: concrete_column_bar_small_2
+    2300038: concrete_column_bar_small_3
+    2300040: concrete_column_bar_small_4
+    2300042: concrete_column_damaged_1
+    2300044: concrete_column_damaged_2
+    3300000: concrete_block_pile_large
+    3300002: concrete_block_pile_messy
+    3300004: concrete_block_pile_small
+    3300006: concrete_block_single
+    3300008: concrete_block_wall_large
+    3300010: concrete_block_wall_large_messy
+    3300012: concrete_block_wall_med
+    3300014: concrete_block_wall_med_messy
+    3300016: concrete_block_wall_small
+    3300018: concrete_block_wall_small_messy_1
+    3300020: concrete_block_wall_small_messy_2
+    3300022: concrete_block_wall_small_messy_3
+    3300024: concrete_column
+    3300026: concrete_column_bar_large_1
+    3300028: concrete_column_bar_large_2
+    3300030: concrete_column_bar_large_3
+    3300032: concrete_column_bar_large_4
+    3300034: concrete_column_bar_small_1
+    3300036: concrete_column_bar_small_2
+    3300038: concrete_column_bar_small_3
+    3300040: concrete_column_bar_small_4
+    3300042: concrete_column_damaged_1
+    3300044: concrete_column_damaged_2
+    4300000: concrete_block_pile_large
+    4300002: concrete_block_pile_messy
+    4300004: concrete_block_pile_small
+    4300006: concrete_block_single
+    4300008: concrete_block_wall_large
+    4300010: concrete_block_wall_large_messy
+    4300012: concrete_block_wall_med
+    4300014: concrete_block_wall_med_messy
+    4300016: concrete_block_wall_small
+    4300018: concrete_block_wall_small_messy_1
+    4300020: concrete_block_wall_small_messy_2
+    4300022: concrete_block_wall_small_messy_3
+    4300024: concrete_column
+    4300026: concrete_column_bar_large_1
+    4300028: concrete_column_bar_large_2
+    4300030: concrete_column_bar_large_3
+    4300032: concrete_column_bar_large_4
+    4300034: concrete_column_bar_small_1
+    4300036: concrete_column_bar_small_2
+    4300038: concrete_column_bar_small_3
+    4300040: concrete_column_bar_small_4
+    4300042: concrete_column_damaged_1
+    4300044: concrete_column_damaged_2
+    6400000: concrete_block_pile_large
+    6400002: concrete_block_pile_messy
+    6400004: concrete_block_pile_small
+    6400006: concrete_block_single
+    6400008: concrete_block_wall_large
+    6400010: concrete_block_wall_large_messy
+    6400012: concrete_block_wall_med
+    6400014: concrete_block_wall_med_messy
+    6400016: concrete_block_wall_small
+    6400018: concrete_block_wall_small_messy_1
+    6400020: concrete_block_wall_small_messy_2
+    6400022: concrete_block_wall_small_messy_3
+    6400024: concrete_column
+    6400026: concrete_column_bar_large_1
+    6400028: concrete_column_bar_large_2
+    6400030: concrete_column_bar_large_3
+    6400032: concrete_column_bar_large_4
+    6400034: concrete_column_bar_small_1
+    6400036: concrete_column_bar_small_2
+    6400038: concrete_column_bar_small_3
+    6400040: concrete_column_bar_small_4
+    6400042: concrete_column_damaged_1
+    6400044: concrete_column_damaged_2
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
