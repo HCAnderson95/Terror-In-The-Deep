@@ -92,7 +92,7 @@ function Win(){
 
 	if(itemCount >= 6)
 	{
-		winText.text = "You Escaped With the Clarinet Pieces.";
+		winText.text = "You Escaped.";
 		enemyTouch = true;
 		GameObject.Find("Squidward").GetComponent(CharacterController).enabled = false;
 
