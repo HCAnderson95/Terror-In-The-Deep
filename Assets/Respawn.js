@@ -14,6 +14,7 @@ function Start () {
 function Update () {
 	i = 0;
 	j = 0;
+	closest = 999999;
 	for(i = 0; i < respawn_loc.length; i++){
 		buffer = Vector3.Distance(Squidward.position, respawn_loc[i].position);
 		if (buffer < closest && buffer > 10){
