@@ -28,7 +28,7 @@ function Start () {
 	{
 	spawned = true;
   	pos1 = Random.insideUnitSphere * 25.0;
-  	Sandy.transform.position = Vector3(pos1.x + Squidward.transform.position.x, 0, pos1.z + Squidward.transform.position.z);
+  	Sandy.transform.position = sandyNextSpawn;
   	agent.enabled = true;
   	SandySound.Play();
   	}
@@ -39,7 +39,7 @@ function Update () {
 	sandyNextSpawn = Respawn.nextSpawn;
 	touch = CharacterMechanics.enemyTouch;
 	
-	if(Sandy.transform.position.y >= 0 && touch == false){
+	if(Sandy.transform.position.y >= -1 && touch == false){
 		Move();
 	}
 	if (touch)

@@ -35,7 +35,7 @@ function Update () {
 
 
 	if(!spawned){
-		if (count >= 1 && timer >= 10){
+		if (count >= 1 && timer >= 30){
 			spawned = true;
 			pos1 = Random.insideUnitSphere * 25.0;
 			SpongeBob.transform.position = spongeNextSpawn;
@@ -44,7 +44,7 @@ function Update () {
 		}
 	}
 	touch = CharacterMechanics.enemyTouch;
-	if(SpongeBob.transform.position.y >= 0){
+	if(SpongeBob.transform.position.y >= -1){
 		if(LightForGlove.enabled && touch == false){
 			agent.Resume();
 			Move();

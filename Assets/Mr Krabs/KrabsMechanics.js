@@ -33,7 +33,7 @@ function Start () {
 function Update () {
 	KrabsNextSpawn = Respawn.nextSpawn;
 	if(!spawned){
-		if(count >= 4 && timer >= 30)
+		if(count >= 4 && timer >= 40)
 		{
 			spawned = true;
   			pos1 = Random.insideUnitSphere * 25.0;
@@ -44,7 +44,7 @@ function Update () {
 	}
 
 	touch = CharacterMechanics.enemyTouch;
-  	if(MrKrabs.transform.position.y >= 0 && touch == false){
+  	if(MrKrabs.transform.position.y >= -1 && touch == false){
   		Move();
   	}
  	if(time >= 4){
