@@ -35,7 +35,7 @@ function Start () {
 function Update(){
 	patrickNextSpawn = Respawn.nextSpawn;
 	if(!spawned){
-		if(count >= 2 && timer >= 20){
+		if(count >= 2 && timer >= 35){
 			spawned = true;
   			pos1 = Random.insideUnitSphere * 25.0;
   			Patrick.transform.position = patrickNextSpawn;
@@ -46,7 +46,7 @@ function Update(){
 
 	touch = CharacterMechanics.enemyTouch;
 
-	if(Patrick.transform.position.y >= 0 && touch == false){
+	if(Patrick.transform.position.y >= -1 && touch == false){
 		Move();
 	}
 	if(time >= 4){

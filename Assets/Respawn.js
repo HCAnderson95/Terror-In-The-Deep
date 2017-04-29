@@ -17,16 +17,16 @@ function Update () {
 	closest = 999999;
 	for(i = 0; i < respawn_loc.length; i++){
 		buffer = Vector3.Distance(Squidward.position, respawn_loc[i].position);
-		if (buffer < closest && buffer > 10){
+		if (buffer < closest && buffer > 20){
 			closest = buffer;
 			nextSpawn = respawn_loc[i].position;
 		}
 	}
-	if (Vector3.Distance(Squidward.position, nextSpawn) <= 10){
+	if (Vector3.Distance(Squidward.position, nextSpawn) <= 20){
 		closest = 999999;
 		for(j = 0; j < respawn_loc.length; j++){
 			buffer = Vector3.Distance(Squidward.position, respawn_loc[i].position);
-			if (buffer < closest && buffer > 10){
+			if (buffer < closest && buffer > 20){
 				closest = buffer;
 				nextSpawn = respawn_loc[i].position;
 			}
