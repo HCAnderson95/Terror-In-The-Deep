@@ -35,7 +35,7 @@ function Start () {
 function Update(){
 	patrickNextSpawn = Respawn.nextSpawn;
 	if(!spawned){
-		if(count >= 2 && timer >= 35){
+		if(count >= 2 && timer >= 25){
 			spawned = true;
   			pos1 = Random.insideUnitSphere * 25.0;
   			Patrick.transform.position = patrickNextSpawn;
@@ -57,8 +57,11 @@ function Update(){
 	  	time = 0;
 	  	Bubbles.Play();
   	}
-  	if (touch)
+  	if (touch){
 		anim.speed = 0;
+		agent.velocity = Vector3.zero;
+		agent.Stop();
+	}
 }
 
 function Move(){

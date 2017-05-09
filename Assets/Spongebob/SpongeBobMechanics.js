@@ -35,7 +35,7 @@ function Update () {
 
 
 	if(!spawned){
-		if (count >= 1 && timer >= 30){
+		if (count >= 1 && timer >= 20){
 			spawned = true;
 			pos1 = Random.insideUnitSphere * 25.0;
 			SpongeBob.transform.position = spongeNextSpawn;
@@ -70,7 +70,11 @@ function Update () {
 			time = 0;
 	}
 	if (touch)
+	{
 		anim.speed = 0;
+		agent.velocity = Vector3.zero;
+		agent.Stop();
+	}
 }
 
 function Move(){

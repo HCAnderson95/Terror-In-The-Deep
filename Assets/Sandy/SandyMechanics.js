@@ -42,8 +42,11 @@ function Update () {
 	if(Sandy.transform.position.y >= -1 && touch == false){
 		Move();
 	}
-	if (touch)
+	if (touch){
 		anim.speed = 0;
+		agent.velocity = Vector3.zero;
+		agent.Stop();
+	}
 }
 
 function Move(){

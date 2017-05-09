@@ -33,7 +33,7 @@ function Start () {
 function Update () {
 	KrabsNextSpawn = Respawn.nextSpawn;
 	if(!spawned){
-		if(count >= 4 && timer >= 40)
+		if(count >= 4 && timer >= 35)
 		{
 			spawned = true;
   			pos1 = Random.insideUnitSphere * 25.0;
@@ -55,8 +55,11 @@ function Update () {
 		time = 0;
 		Bubbles.Play();
   	}
-  	if (touch)
+  	if (touch){
 		anim.speed = 0;
+		agent.velocity = Vector3.zero;
+		agent.Stop();
+	}
 }
 
 function Move(){
